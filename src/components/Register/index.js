@@ -2,17 +2,19 @@ import React from 'react';
 import './styles.scss';
 
 import { Link } from 'react-router-dom'
+
 import useFetch from '../../hooks/useFetch'
+import Loading from '../Loading'
 
 
 function Register() {
   const { data } = useFetch('https://jsonplaceholder.typicode.com/users')
 
-  if (!data) return <p>loading....</p>
-  
+  if (!data) return <Loading />
+
   return (
     <div className="card_register">
-      <h1>register of employees</h1>
+      <h1>list of employees</h1>
       {
         data.map((user) => {
           return (

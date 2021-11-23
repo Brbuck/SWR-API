@@ -1,0 +1,42 @@
+.loading-page{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #load {
+        width: 80px;
+        height: 80px;
+        border: 20px solid;
+        border-radius: 50%;
+        border-top-color: transparent;
+        margin: 0 auto;
+        color: #FF4500;
+        animation: load 0.6s linear infinite;
+      }
+      
+      @keyframes load {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      
+      @keyframes loadFrames {
+        0% {
+          transform: translate(0px) scale(0.5);
+        }
+        25% {
+          transform: translate(200px);
+        }
+        50% {
+          transform: translate(200px, -200px) scale(1.5);
+        }
+        75% {
+          transform: translate(0px, -200px);
+        }
+        100% {
+          transform: translate(0px) scale(0.5);
+        }
+      }
+}

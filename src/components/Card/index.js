@@ -1,20 +1,24 @@
 import React from 'react';
 import './styles.scss'
+
 import { useParams } from 'react-router-dom';
-import useFetch from '../../hooks/useFetch';
 import { Link } from 'react-router-dom'
+
+import useAxios from '../../hooks/useAxios';
+import Loading from '../Loading'
 
 
 function Card() {
     const { id } = useParams();
-    const { data } = useFetch(`https://jsonplaceholder.typicode.com/users/${id}`);
+    const { data } = useAxios(`https://jsonplaceholder.typicode.com/users/${id}`);
 
     if (!data) {
-        return <p>Carregando...</p>
+        return <Loading />
     }
 
     return (
         <div className="card_employee">
+            <h1>Register of  employee</h1>
             <p>Name: <span>{data.name}</span></p>
             <p>E-mail: <span>{data.email}</span></p>
             <p>Phone: <span>{data.phone}</span></p>
