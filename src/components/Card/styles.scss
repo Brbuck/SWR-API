@@ -1,0 +1,47 @@
+.card_employee{
+    width: 600px;
+    height: 500px;
+    margin:  30px auto;
+    border: 1px solid #ccc;
+    padding: 20px 50px;
+
+    p{
+        font-size: 1.5rem;
+        color: #222;
+       
+        span{
+            color: #777;
+        }
+    }
+
+    h2{
+        font-size: 1.8rem;
+        color: #FF4500;
+    }
+
+    div{
+        display: flex;
+        justify-content:space-between;
+        align-items:center;
+        line-height: 10px;
+        
+    }
+
+    a{
+        display: block;
+        text-decoration:none;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-top: 30px;
+        text-align: center;
+        padding: 8px 20px;
+        background-color: #FF4500;
+        color: #fff;
+        border-radius: 20px;
+        transition: 0.3s;
+        
+        &:hover{
+            filter: opacity(0.8);
+        }
+    }
+}
